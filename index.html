@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReparacionesHouse | Diagnóstico y Plomería en El Peñón</title>
+    
+    <!-- SEO On-Page -->
+    <meta name="description" content="Servicios informativos y de diagnóstico en plomería y reparaciones del hogar en Buenos Aires, El Peñón, Colombia. Mantenimiento preventivo y correctivo por Joimer Cadena Redondo.">
+    <meta name="keywords" content="plomería, reparaciones del hogar, diagnóstico hidráulico, mantenimiento preventivo, El Peñón Colombia, Joimer Cadena Redondo">
+    <meta name="author" content="Joimer Cadena Redondo">
+    <meta name="robots" content="index, follow">
+
+    <!-- SEO Técnico: Schema.org LocalBusiness -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HomeAndConstructionBusiness",
+      "name": "ReparacionesHouse",
+      "description": "Servicios de diagnóstico de plomería y mantenimiento del hogar.",
+      "telephone": "+573002876536",
+      "email": "busarikaee@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Cra. 3 #9-52",
+        "addressLocality": "Buenos Aires, El Peñón",
+        "addressCountry": "CO"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
+        ],
+        "opens": "08:00",
+        "closes": "17:00"
+      }
+    }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+    <style>
+        /* Variables y Reset */
+        :root {
+            --primary-blue: #1E3A8A; /* Azul confianza */
+            --accent-orange: #F59E0B; /* Naranja acción/herramienta */
+            --text-dark: #1F2937;
+            --text-muted: #4B5563;
+            --bg-light: #F9FAFB;
+            --white: #FFFFFF;
+            --border-color: #E5E7EB;
+            --font-main: 'Inter', sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; font-size: 16px; }
+        body { font-family: var(--font-main); color: var(--text-dark); background-color: var(--white); line-height: 1.6; }
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+        /* Botones */
+        .btn-cta {
+            display: inline-block;
+            background-color: var(--accent-orange);
+            color: var(--white);
+            padding: 16px 32px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            text-align: center;
+        }
+        .btn-cta:hover { background-color: #D97706; transform: translateY(-2px); }
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--primary-blue);
+            color: var(--primary-blue);
+        }
+        .btn-outline:hover { background-color: var(--primary-blue); color: var(--white); }
+
+        /* Header */
+        header { background-color: var(--white); border-bottom: 1px solid var(--border-color); padding: 15px 0; position: sticky; top: 0; z-index: 100; }
+        .nav-wrapper { display: flex; justify-content: space-between; align-items: center; }
+        .brand { font-size: 1.5rem; font-weight: 800; color: var(--primary-blue); }
+        .brand span { color: var(--accent-orange); }
+        .nav-links { display: flex; gap: 25px; align-items: center; }
+        .nav-links a { font-weight: 600; color: var(--text-muted); transition: color 0.3s; }
+        .nav-links a:hover { color: var(--primary-blue); }
+        .contact-top { font-weight: 800; color: var(--primary-blue); }
+
+        /* Hero Section */
+        .hero { background: linear-gradient(rgba(30, 58, 138, 0.9), rgba(30, 58, 138, 0.8)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" opacity="0.1"><rect width="100" height="100" fill="%23ffffff"/></svg>') center/cover; padding: 100px 0; color: var(--white); text-align: center; }
+        .hero h1 { font-size: clamp(2.5rem, 5vw, 3.5rem); line-height: 1.2; margin-bottom: 20px; font-weight: 800; }
+        .hero p { font-size: 1.25rem; max-width: 800px; margin: 0 auto 40px auto; color: #D1D5DB; font-weight: 300; }
+
+        /* Transparencia */
+        .disclaimer-bar { background-color: #FEF3C7; color: #92400E; padding: 15px 20px; text-align: center; font-size: 0.9rem; font-weight: 600; border-bottom: 1px solid #FDE68A; }
+
+        /* Secciones Generales */
+        .section-pad { padding: 80px 0; }
+        .section-title { text-align: center; font-size: 2.2rem; color: var(--primary-blue); margin-bottom: 50px; font-weight: 800; }
+        
+        /* Beneficios */
+        .bg-light { background-color: var(--bg-light); }
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .card { background: var(--white); padding: 40px 30px; border-radius: 8px; border: 1px solid var(--border-color); box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); }
+        .card h3 { color: var(--primary-blue); font-size: 1.3rem; margin-bottom: 15px; }
+        .card p { color: var(--text-muted); font-size: 0.95rem; }
+
+        /* Servicios / Propuesta de Valor */
+        .service-row { display: flex; align-items: center; gap: 40px; margin-bottom: 60px; }
+        .service-row:nth-child(even) { flex-direction: row-reverse; }
+        .service-text { flex: 1; }
+        .service-text h3 { font-size: 1.8rem; color: var(--primary-blue); margin-bottom: 20px; }
+        .service-text p { color: var(--text-muted); margin-bottom: 15px; font-size: 1.05rem; }
+        .service-visual { flex: 1; background: var(--bg-light); border: 2px dashed var(--border-color); height: 300px; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--text-muted); font-weight: 600; }
+
+        /* Metodología (Prueba Social basada en autoridad técnica) */
+        .methodology { background-color: var(--primary-blue); color: var(--white); }
+        .methodology .section-title { color: var(--white); }
+        .step-box { text-align: center; padding: 20px; }
+        .step-number { background: var(--accent-orange); color: var(--white); width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 800; margin: 0 auto 20px auto; }
+        .step-box h4 { font-size: 1.2rem; margin-bottom: 10px; }
+        .step-box p { color: #9CA3AF; font-size: 0.95rem; }
+
+        /* Formulario de Contacto */
+        .contact-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 50px; }
+        .contact-info h3 { font-size: 1.5rem; color: var(--primary-blue); margin-bottom: 25px; }
+        .info-list li { margin-bottom: 20px; display: flex; flex-direction: column; }
+        .info-list strong { color: var(--text-dark); font-size: 1.1rem; }
+        .info-list span { color: var(--text-muted); }
+        
+        .form-box { background: var(--white); padding: 40px; border-radius: 8px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); border: 1px solid var(--border-color); }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; margin-bottom: 8px; font-weight: 600; color: var(--text-dark); }
+        .form-control { width: 100%; padding: 12px 15px; border: 1px solid var(--border-color); border-radius: 6px; font-family: var(--font-main); font-size: 1rem; }
+        .form-control:focus { outline: none; border-color: var(--primary-blue); box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.1); }
+        textarea.form-control { height: 120px; resize: vertical; }
+        .alert-success { display: none; background-color: #D1FAE5; color: #065F46; padding: 15px; border-radius: 6px; margin-top: 20px; font-weight: 600; text-align: center; }
+
+        /* Footer */
+        footer { background-color: #111827; color: #9CA3AF; padding: 40px 0 20px; text-align: center; }
+        .footer-links { margin-bottom: 20px; }
+        .footer-links a { color: #D1D5DB; margin: 0 15px; font-size: 0.9rem; text-decoration: underline; }
+        .footer-links a:hover { color: var(--white); }
+        .footer-copy { font-size: 0.85rem; border-top: 1px solid #374151; padding-top: 20px; margin-top: 20px; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hero { padding: 60px 0; }
+            .service-row, .service-row:nth-child(even) { flex-direction: column; }
+            .contact-grid { grid-template-columns: 1fr; }
+            .form-box { padding: 25px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="brand">Reparaciones<span>House</span></a>
+            <nav class="nav-links">
+                <a href="#diagnostico">Enfoque</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#contacto">Solicitar Visita</a>
+                <span class="contact-top">📞 300 287 6536</span>
+            </nav>
+        </div>
+    </header>
+
+    <div class="disclaimer-bar">
+        Portal Informativo Local: Prestamos servicios de diagnóstico y mantenimiento exclusivamente en Buenos Aires, El Peñón. No vendemos suministros ni ofrecemos pólizas de seguros.
+    </div>
+
+    <main>
+        <!-- Hero -->
+        <section class="hero">
+            <div class="container">
+                <h1>Diagnóstico Estructural y Plomería Preventiva</h1>
+                <p>Información técnica y evaluación profesional para identificar, prevenir y solucionar fallas en las redes hidráulicas e infraestructura de su hogar.</p>
+                <a href="#contacto" class="btn-cta">Solicita un Diagnóstico de Plomería</a>
+            </div>
+        </section>
+
+        <!-- Beneficios (Enfoque informativo) -->
+        <section id="diagnostico" class="section-pad bg-light">
+            <div class="container">
+                <h2 class="section-title">El Valor del Mantenimiento Preventivo</h2>
+                <div class="grid-3">
+                    <div class="card">
+                        <h3>Prevención de Daños Mayores</h3>
+                        <p>Identificar filtraciones invisibles o desgaste en tuberías a tiempo evita comprometer la estructura de muros y cimientos por humedad prolongada.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Eficiencia Hidráulica</h3>
+                        <p>La revisión de presiones y válvulas asegura un flujo constante, evitando el desperdicio de agua y optimizando el rendimiento de sus griferías.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Seguridad Residencial</h3>
+                        <p>Garantizar que las conexiones e instalaciones sanitarias cumplan con estándares técnicos previene incidentes de salubridad y filtraciones cruzadas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Servicios / Propuesta de Valor -->
+        <section id="servicios" class="section-pad">
+            <div class="container">
+                <h2 class="section-title">Áreas de Intervención Técnica</h2>
+                
+                <div class="service-row">
+                    <div class="service-text">
+                        <h3>Análisis de Redes de Plomería</h3>
+                        <p>Evaluamos el estado actual de las tuberías de agua potable y desagües. Realizamos un rastreo informativo para detectar obstrucciones, fugas de presión o desgaste de materiales debido a la antigüedad de la edificación.</p>
+                        <ul style="list-style: disc; margin-left: 20px; color: var(--text-muted); margin-bottom: 15px;">
+                            <li>Revisión de sifones y trampas de grasa.</li>
+                            <li>Diagnóstico de presión en duchas y lavamanos.</li>
+                            <li>Inspección visual de puntos de humedad.</li>
+                        </ul>
+                    </div>
+                    <div class="service-visual">
+                        [Esquema de Análisis de Redes Hidráulicas]
+                    </div>
+                </div>
+
+                <div class="service-row">
+                    <div class="service-text">
+                        <h3>Reparaciones Generales del Hogar</h3>
+                        <p>Proveemos servicios de mantenimiento correctivo para restaurar la funcionalidad de sus espacios. Nuestro enfoque prioriza la durabilidad de la reparación mediante el uso adecuado de materiales sellantes y técnicas de fijación estructural.</p>
+                        <p>Cada intervención comienza con una explicación clara al propietario sobre el origen del problema y las opciones técnicas viables para su resolución.</p>
+                    </div>
+                    <div class="service-visual">
+                        [Diagrama de Mantenimiento Estructural]
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Metodología (Autoridad sin testimonios falsos) -->
+        <section class="section-pad methodology">
+            <div class="container">
+                <h2 class="section-title">Nuestra Metodología de Trabajo</h2>
+                <div class="grid-3">
+                    <div class="step-box">
+                        <div class="step-number">1</div>
+                        <h4>Inspección Visual Técnica</h4>
+                        <p>Agendamos una visita para evaluar el área afectada, tomando medidas y verificando el estado de los materiales existentes.</p>
+                    </div>
+                    <div class="step-box">
+                        <div class="step-number">2</div>
+                        <h4>Reporte y Cotización</h4>
+                        <p>Entregamos un diagnóstico claro sobre la causa raíz del problema junto con un plan de acción y los costos de los insumos requeridos.</p>
+                    </div>
+                    <div class="step-box">
+                        <div class="step-number">3</div>
+                        <h4>Ejecución Controlada</h4>
+                        <p>Realizamos la reparación minimizando el impacto en su rutina diaria y asegurando la limpieza final del área de trabajo.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Formulario de Contacto -->
+        <section id="contacto" class="section-pad bg-light">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h3>Información del Operador</h3>
+                        <p style="margin-bottom: 30px; color: var(--text-muted);">Estamos disponibles para atender sus requerimientos de infraestructura residencial. Contáctenos para coordinar una evaluación técnica.</p>
+                        
+                        <ul class="info-list">
+                            <li>
+                                <strong>Responsable Técnico</strong>
+                                <span>JOIMER CADENA REDONDO</span>
+                            </li>
+                            <li>
+                                <strong>Área de Cobertura</strong>
+                                <span>Cra. 3 #9-52, Buenos Aires, El Peñón, Colombia</span>
+                            </li>
+                            <li>
+                                <strong>Línea de Atención</strong>
+                                <span>300 287 6536</span>
+                            </li>
+                            <li>
+                                <strong>Correo Electrónico</strong>
+                                <span>busarikaee@gmail.com</span>
+                            </li>
+                            <li>
+                                <strong>Horario de Operación</strong>
+                                <span>Lunes a Domingo de 8:00 am a 5:00 pm</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="form-box">
+                        <h3 style="margin-bottom: 20px; font-size: 1.5rem; color: var(--primary-blue);">Agende su Revisión</h3>
+                        <form id="leadForm">
+                            <div class="form-group">
+                                <label for="nombre">Nombre Completo</label>
+                                <input type="text" id="nombre" class="form-control" required placeholder="Ej. Carlos Martínez">
+                            </div>
+                            <div class="form-group">
+                                <label for="telefono">Teléfono de Contacto</label>
+                                <input type="tel" id="telefono" class="form-control" required placeholder="Ej. 300 123 4567">
+                            </div>
+                            <div class="form-group">
+                                <label for="asunto">Tipo de Falla (Opcional)</label>
+                                <input type="text" id="asunto" class="form-control" placeholder="Ej. Fuga en lavaplatos, humedad en pared...">
+                            </div>
+                            <div class="form-group">
+                                <label for="mensaje">Detalles de la solicitud</label>
+                                <textarea id="mensaje" class="form-control" required placeholder="Describa brevemente qué tipo de revisión o mantenimiento requiere en su domicilio..."></textarea>
+                            </div>
+                            <button type="submit" class="btn-cta" style="width: 100%;">Solicitar Evaluación Técnica</button>
+                            <div id="formAlert" class="alert-success">Su solicitud de diagnóstico ha sido registrada. Nos comunicaremos pronto en nuestro horario de atención.</div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="politica-de-privacidad.html">Política de Privacidad</a>
+                <a href="terminos-y-condiciones.html">Términos y Condiciones</a>
+            </div>
+            <p>ReparacionesHouse - Mantenimiento e Infraestructura Residencial.</p>
+            <div class="footer-copy">
+                &copy; <span id="year"></span> Operado por Joimer Cadena Redondo. Buenos Aires, El Peñón, Colombia. Proyecto puramente informativo y de servicio local.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script de control del formulario (Vanilla JS) -->
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        document.getElementById('leadForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // Evita recargas y redirecciones externas
+            
+            const btn = this.querySelector('button[type="submit"]');
+            const alertBox = document.getElementById('formAlert');
+            
+            // Estado de carga
+            btn.textContent = 'Procesando...';
+            btn.style.opacity = '0.7';
+            btn.disabled = true;
+
+            // Simulación de envío exitoso
+            setTimeout(() => {
+                this.reset();
+                btn.textContent = 'Solicitar Evaluación Técnica';
+                btn.style.opacity = '1';
+                btn.disabled = false;
+                
+                alertBox.style.display = 'block';
+                
+                setTimeout(() => {
+                    alertBox.style.display = 'none';
+                }, 8000);
+            }, 1200);
+        });
+    </script>
+</body>
+</html>
